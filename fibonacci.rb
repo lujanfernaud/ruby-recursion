@@ -1,4 +1,4 @@
-# Project: Fibonacci in Ruby for The Odin Project
+# Project: Fibonacci in Ruby using recursion for The Odin Project
 # Author: Luján Fernaud
 #
 # Instructions:
