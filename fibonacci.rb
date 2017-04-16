@@ -10,6 +10,8 @@
 # recursively. This can be done in just 3 lines (or 1 if you're crazy,
 # but don't consider either of these lengths a requirement... just get it done).
 
+require "benchmark"
+
 def fibs(number)
   array = []
   (0..number).each do |n|
@@ -25,7 +27,18 @@ end
 number = 9
 
 # fibs(9) => 34
-puts "fibs(#{number}) => #{fibs(number)}"
+puts "\nfibs(#{number}) => #{fibs(number)}"
 
 # fibs_rec(9) => 34
 puts "fibs_rec(#{number}) => #{fibs_rec(number)}"
+
+puts "\n----------"
+puts "Benchmarks"
+puts "----------\n\n"
+
+Benchmark.bm do |benchmark|
+  benchmark.report("fibs(33)    ") { fibs(33) }
+  benchmark.report("fibs_rec(33)") { fibs_rec(33) }
+end
+
+puts "\n"
