@@ -10,8 +10,6 @@
 # recursively. This can be done in just 3 lines (or 1 if you're crazy,
 # but don't consider either of these lengths a requirement... just get it done).
 
-number = 21
-
 def fibs(number)
   array = []
   (0..number).each do |n|
@@ -20,12 +18,14 @@ def fibs(number)
   array.last
 end
 
-# fibs(21) => 10946
-puts "fibs(#{number}) => #{fibs(number)}"
-
 def fibs_rec(number)
   number < 2 ? number : fibs_rec(number - 2) + fibs_rec(number - 1)
 end
 
-# fibs_rec(21) => 10946
+number = 9
+
+# fibs(9) => 34
+puts "fibs(#{number}) => #{fibs(number)}"
+
+# fibs_rec(9) => 34
 puts "fibs_rec(#{number}) => #{fibs_rec(number)}"
