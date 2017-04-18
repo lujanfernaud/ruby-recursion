@@ -26,7 +26,7 @@ end
 
 number = 9
 
-puts "\nfibs(#{number}) => #{fibs(number)}" # fibs(9) => 34
+puts "\nfibs(#{number}) => #{fibs(number)}"       # fibs(9) => 34
 puts "fibs_rec(#{number}) => #{fibs_rec(number)}" # fibs_rec(9) => 34
 
 puts "\n----------"
@@ -34,8 +34,8 @@ puts "Benchmarks"
 puts "----------\n\n"
 
 Benchmark.bm do |benchmark|
-  benchmark.report("fibs(33)    ") { fibs(33) }
-  benchmark.report("fibs_rec(33)") { fibs_rec(33) }
+  benchmark.report("fibs(33)    ") { fibs(33) }     # => (  0.000012)
+  benchmark.report("fibs_rec(33)") { fibs_rec(33) } # => (  0.476160)
 end
 
 puts "\n"
