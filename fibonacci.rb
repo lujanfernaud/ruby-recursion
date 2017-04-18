@@ -26,11 +26,8 @@ end
 
 number = 9
 
-# fibs(9) => 34
-puts "\nfibs(#{number}) => #{fibs(number)}"
-
-# fibs_rec(9) => 34
-puts "fibs_rec(#{number}) => #{fibs_rec(number)}"
+puts "\nfibs(#{number}) => #{fibs(number)}" # fibs(9) => 34
+puts "fibs_rec(#{number}) => #{fibs_rec(number)}" # fibs_rec(9) => 34
 
 puts "\n----------"
 puts "Benchmarks"
